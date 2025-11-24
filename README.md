@@ -163,3 +163,111 @@ y = 2.5     # float
 z = x + y   # Python implicitly converts x to float
 print(z)    # Output: 7.5
 ```
+
+
+
+## Python Conditional Statements
+
+Conditional statements allow your program to **make decisions** based on conditions.  
+Python provides `if`, `elif`, and `else` statements, along with logical operators and nested conditions.
+
+---
+
+### 1. Basic `if` Statement
+
+- Executes a block of code **only if the condition is True**.
+- Use `else` to handle the case when the condition is False.
+
+```python
+age = int(input("What is your age? "))
+
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are a minor.")
+```
+
+**Explanation:**  
+- `if age >= 18:` checks if the user is 18 or older.  
+- If True → prints “You are an adult”.  
+- If False → the `else` block runs, printing “You are a minor.”
+
+---
+
+### 2. `elif` (Else-If) Statement
+
+- Use `elif` to check **multiple conditions** in sequence.
+
+```python
+age = int(input("What is your age? "))
+
+if age >= 18:
+    print("You are an adult")
+elif age < 0:
+    print("You are still in your father's nut sack!")  # humorous invalid input
+else:
+    print("You are a minor.")
+```
+
+**Explanation:**  
+- The first `if` checks if age ≥ 18.  
+- `elif` checks another condition (age < 0) — useful for invalid input.  
+- `else` handles all remaining cases.
+
+---
+
+### 3. Logical Operators (`and`, `or`, `not`)
+
+- Combine multiple conditions in a single `if` statement.
+
+```python
+temp = int(input("What is the temperature today? "))
+
+if temp >= 0 and temp <= 30:
+    print("The temperature is good today")
+    print("Go outside")
+elif temp < 0 or temp > 30:
+    print("The temperature is bad today")
+    print("Stay inside")
+else:
+    print("Unable to detect temperature")
+```
+
+**Explanation:**  
+- `and` → both conditions must be True.  
+- `or` → at least one condition must be True.  
+- `not` → reverses the Boolean value.  
+- Helps handle multiple scenarios in one check.
+
+---
+
+### 4. Nested `if` Statements
+
+- An `if` statement inside another `if` statement.
+- Useful for **hierarchical or dependent conditions**.
+
+```python
+age = int(input("Enter your age: "))
+
+if age >= 0:  # Outer if: check valid age
+    if age >= 18:  # Inner if: check adult
+        print("You are an adult")
+    else:  # Inner else: not adult
+        print("You are a minor")
+else:  # Outer else: invalid age
+    print("Invalid age")
+```
+
+**Explanation:**  
+- Outer `if` ensures age is valid (≥ 0).  
+- Inner `if` distinguishes between adult and minor.  
+- Outer `else` handles invalid input.
+
+---
+
+**Key Points to Remember:**  
+- Conditions are **Boolean expressions** (True/False).  
+- Python uses **indentation** to define blocks.  
+- `if`, `elif`, `else` are evaluated **in order**; only the first True block executes.  
+- Logical operators can combine multiple conditions efficiently.  
+- Nested `if` statements allow more precise checks within broader conditions.
