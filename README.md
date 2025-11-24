@@ -73,3 +73,13 @@ garry = 30
 
 #- Same as:
 spongebob = patric = garry = 30
+
+## Printing Messages
+# Python uses the `print()` function to display text or values on the screen.
+# Anything inside quotes (" ") is treated as a string.
+# Each print statement shows a new line in the output.
+
+```python
+print("What you want to print")
+print("Hello World")
+
