@@ -55,47 +55,56 @@
 # Conditional stateemnts.
 #if statements
 
-age = int(input("what is your age?"))
+# age = int(input("what is your age?"))
 
-if age >= 18:
-    print("you are an adult")
-else:
-    print("you are minor.")
-
-
-## else-if (elif) statements
-age = int(input("what is your age?"))
-
-if age >= 18 :
-    print("you are an adult")
-elif age < 0:
-    print("Your are stiill in your father's nut sack!")
-else:
-    print("you are minor.")
+# if age >= 18:
+#     print("you are an adult")
+# else:
+#     print("you are minor.")
 
 
-## Logical operators with if statements and, or, not.
-temp = int(input("what is the temperature today?"))
+# ## else-if (elif) statements
+# age = int(input("what is your age?"))
 
-if temp >= 0 and temp <= 30:
-    print("the temperature is good today")
-    print("go outside")
-elif temp < 0 or temp > 30:
-    print("the temperature is bad today")
-    print("stay inside")
-else:
-    print("unable to detect temperature")
+# if age >= 18 :
+#     print("you are an adult")
+# elif age < 0:
+#     print("Your are stiill in your father's nut sack!")
+# else:
+#     print("you are minor.")
 
-## nested if statements
-age = int(input("Enter your age: "))
 
-if age >= 0:  # Outer if: check valid age
-    if age >= 18:  # Inner if: check adult
-        print("You are an adult")
-    else:  # Inner else: not adult, must be minor
-        print("You are a minor")
-else:  # Outer else: invalid age
-    print("Invalid age")
+# ## Logical operators with if statements and, or, not.
+# temp = int(input("what is the temperature today?"))
+
+# if temp >= 0 and temp <= 30:
+#     print("the temperature is good today")
+#     print("go outside")
+# elif temp < 0 or temp > 30:
+#     print("the temperature is bad today")
+#     print("stay inside")
+# else:
+#     print("unable to detect temperature")
+
+# ## nested if statements
+# age = int(input("Enter your age: "))
+
+# if age >= 0:  # Outer if: check valid age
+#     if age >= 18:  # Inner if: check adult
+#         print("You are an adult")
+#     else:  # Inner else: not adult, must be minor
+#         print("You are a minor")
+# else:  # Outer else: invalid age
+#     print("Invalid age")
+
+
+## While loops.
+name = ""
+while len(name) == 0:
+    name = input("Enter your name: ")
+print("Hello " + name)
+
+
 
 
 
