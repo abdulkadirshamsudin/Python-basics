@@ -1,71 +1,116 @@
-## Printing Messages
-# ---------------------------
-# How to print output in Python
-#- Use the print() function to display text or values on the screen.
+# Python Basics — Full Beginner Reference
 
-#Example
+This README provides a complete overview of fundamental Python concepts.  
+All examples are clean, simple, and practical for revision.
+
+---
+
+## 1. Printing Output
+Python displays text using the `print()` function.
+
+```python
 print("What you want to print")
 print("Hello World")
+```
 
+---
 
-## Variables
-# ---------------------------
-# What are variables?
-#- Variables are containers that hold values such as integers, strings, floats, and booleans.
+## 2. Variables
+Variables store values. Python uses dynamic typing, so you don’t declare types manually.
 
+Common variable types:
 
-## 1. Strings
-# ---------------------------
-#- Strings represent text values.
+- **String** → text  
+- **Integer (int)** → whole numbers  
+- **Float** → decimal numbers  
+- **Boolean (bool)** → True/False  
 
-#Example
+```python
+name = "Shariff"
+age = 21
+height = 178.5
+human = True
+```
+
+---
+
+## 3. Strings
+Strings hold text. You can combine them (concatenate).
+
+```python
 first_name = "bro"
 last_name = "shariff"
 full_name = first_name + " " + last_name
 print(full_name)
+```
 
+---
 
-## 2. Integers (int)
-# ---------------------------
-#- Integers represent whole numbers.
+## 4. Integers (int)
+Integers represent whole numbers and support arithmetic.
 
-#Example
+```python
 age = 21
-age += 1  # incrementing age
+age += 1   # increment age by 1
 print("My age is " + str(age))
-#- "str(age)" above is type casting (converting int to string).
+```
 
+### Type Casting
+Convert numbers to strings when concatenating:
 
-## 3. Floats
-# ---------------------------
-#- Floats represent decimal numbers.
+```python
+str(age)
+```
 
-#Example
+---
+
+## 5. Floats
+Floats represent decimal values.
+
+```python
 height = 178.5
 print("My height is " + str(height))
+```
 
+---
 
-## 4. Booleans
-# ---------------------------
-#- Booleans represent True or False values.
+## 6. Booleans
+Booleans represent truth values: `True` or `False`.
 
-#Example
+```python
 human = False
 print(human)
+```
 
+---
 
-## Multiple Assignment
-# ---------------------------
-#- Assign multiple variables on a single line.
+## 7. Multiple Assignment
+Assign multiple variables at once.
 
-#Example
+### Example 1 — Different values
+```python
 name, age, attractive = "shariff", 21, True
+```
 
+### Example 2 — Same value
+```python
+spongebob = patrick = gary = 30
+```
 
-#Example
-spongebob = 30
-patrick = 30
-garry = 30
+---
 
-#- Same as:
-spongebob = patrick = garry = 30
+## 8. Summary Table of Concepts
+
+| Concept             | Description               | Example                     |
+|--------------------|---------------------------|-----------------------------|
+| Print statements    | Display text              | `print("Hello")`            |
+| Strings             | Text values               | `"Shariff"`                 |
+| Integers            | Whole numbers             | `21`                        |
+| Floats              | Decimal values            | `178.5`                     |
+| Booleans            | True/False values         | `True`                      |
+| Type Casting        | Convert types             | `str(21)`                   |
+| Multiple Assignment | Set many values at once   | `a, b = 1, 2`               |
+
+---
+
+**End of README**
