@@ -134,3 +134,32 @@ This table summarizes commonly used string methods with examples and explanation
 ```python
 new_name = name.upper()  # stores the uppercase version
 ```
+## Python Type Casting (Conversion)
+
+Type casting (or type conversion) is the process of **converting a value from one data type to another**.
+
+| Conversion Function | Example Code                  | Explanation |
+|--------------------|-------------------------------|-------------|
+| `int()`            | `int("21")`                   | Converts a string or float to an integer. Decimals are truncated. |
+| `float()`          | `float("21.5")`               | Converts a string or integer to a floating-point number. |
+| `str()`            | `str(21)`                      | Converts an integer, float, or boolean to a string. |
+| `bool()`           | `bool(0)` / `bool(1)`         | Converts a value to a boolean. Zero or empty values → `False`; all others → `True`. |
+| `complex()`        | `complex(2,3)`                 | Converts numbers to a complex number (real + imaginary). |
+
+### Notes
+- Type casting is **explicit**, meaning you must call the conversion function.  
+- Python also performs **implicit type conversion** in some cases, e.g., combining int and float in arithmetic.  
+- Example of explicit casting:
+```python
+age_str = "21"
+age_int = int(age_str)  # Converts string "21" to integer 21
+print(age_int + 5)      # Output: 26
+```
+
+- Example of combining int and float:
+```python
+x = 5       # int
+y = 2.5     # float
+z = x + y   # Python implicitly converts x to float
+print(z)    # Output: 7.5
+```
