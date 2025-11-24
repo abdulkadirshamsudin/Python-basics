@@ -39,7 +39,17 @@ garry = 30
 #- is the same as saying:
 sopngebob = patric = garry = 30
 
+# useful string method.
+#len allows us to see the length of a variable.
+name = "len(bro)"
 
-
+#find used to find character possitions
+print(name.find ("o"))
+print(name.capitalize)
+print(name.upper())
+print(name.lower())
+print(name.isalpha())
+print(name.replace())
+print(name*3) # prints name 3 times.
 
 

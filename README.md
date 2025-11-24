@@ -113,4 +113,24 @@ spongebob = patrick = gary = 30
 
 ---
 
-**End of README**
+*
+## Python String Methods — Quick Reference
+
+This table summarizes commonly used string methods with examples and explanations.
+
+| Method / Operator       | Example Code                     | Explanation |
+|-------------------------|---------------------------------|-------------|
+| `find()`                | `name.find("o")`                | Returns the **index of the first occurrence** of the specified character. If not found, returns -1. |
+| `capitalize()`          | `name.capitalize()`             | Capitalizes the **first letter** of the string. |
+| `upper()`               | `name.upper()`                  | Converts all characters in the string to **uppercase**. |
+| `lower()`               | `name.lower()`                  | Converts all characters in the string to **lowercase**. |
+| `isalpha()`             | `name.isalpha()`                | Returns `True` if **all characters** in the string are letters. Otherwise `False`. |
+| `replace()`             | `name.replace("o", "a")`        | Replaces **specified substring** with another substring. |
+| `*` (repetition)        | `name * 3`                      | Repeats the string **3 times**. |
+
+### Notes
+- `name` should be a string variable, e.g., `name = "Shariff"`.  
+- Always remember string methods **do not modify the original string** unless assigned to a variable. For example:  
+```python
+new_name = name.upper()  # stores the uppercase version
+```
