@@ -99,11 +99,23 @@
 
 
 ## While loops.
-name = ""
-while len(name) == 0:
-    name = input("Enter your name: ")
-print("Hello " + name)
 
+#example one
+
+# name = ""
+# while len(name) == 0:
+#     name = input("Etner your name:")
+# print("Hello " + name)
+
+
+#Example two
+count = 0
+while count < 5:
+    print("bro code")
+    count += 1
+
+# # example three
+count = 0
 
 
 
