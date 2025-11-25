@@ -108,15 +108,31 @@
 # print("Hello " + name)
 
 
-#Example two
-count = 0
-while count < 5:
-    print("bro code")
-    count += 1
+# #Example two
+# count = 0
+# while count < 5:
+#     print("bro code")
+#     count += 1
 
-# # example three
-count = 0
+# # # example three
+# count = 0
 
+# for i in range(10):
+#     print(i)
 
+# Fruites = {"apple", "banana", "cherry"}
+# for i in Fruites:
+#     print(i)
 
+# total = 0
+# for i in range(100):
+#     total += i
+# print(total)
+
+import time
+
+for seconds in range(10,0, -2):
+    print(seconds)
+    time.sleep(1)
+print("Happy New Year!")
 

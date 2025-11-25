@@ -314,6 +314,34 @@ print("Sum:", total)
 # Sum: 15
 ```
 
+### Countdown Timer Using `range()` and `time.sleep()`
+
+This example shows how to create a countdown timer in Python.  
+It uses:
+
+- `range(start, stop, step)` → counts from 10 down to 1 in steps of -2  
+- `time.sleep(1)` → pauses the program for 1 second between each number
+
+```python
+import time
+
+for seconds in range(10, 0, -2):
+    print(seconds)
+    time.sleep(1)
+print("Happy New Year!")
+# Output:
+# 10
+# 8
+# 6
+# 4
+# 2
+# Happy New Year!
+```
+
+This is useful whenever you need delays, countdowns, or timed operations in your programs.
+
+
+
 **Key Points for `for` loops:**
 - `range(start, stop, step)` generates numbers: `start` inclusive, `stop` exclusive.  
 - Loops can iterate over **any iterable**: strings, lists, tuples, sets, dictionaries (keys or values).  
