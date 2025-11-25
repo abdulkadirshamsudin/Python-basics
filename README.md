@@ -611,3 +611,165 @@ countdown(5, -1, -1, "Blast off!")
 - `return` lets functions output values.  
 - Functions can contain **loops, conditionals, and other functions**.  
 - Properly documented functions (with docstrings) are easier to read and maintain.  
+
+
+## Advanced Function Concepts in Python
+
+Python functions can be made more powerful and flexible using **return statements, keyword arguments, nested function calls, and default arguments**.  
+Below is a detailed guide with examples and outputs.
+
+---
+
+### 1. Return Statement
+
+The `return` statement **exits a function and sends a value back** to the caller.  
+Any code after `return` inside the function is **not executed**.
+
+```python
+# Example 1: Using return
+def multiply(number1, number2):
+    result = number1 * number2
+    return result
+    # print(result)  # This line will NOT be executed
+
+x = multiply(3, 5)
+print(x)
+# Output:
+# 15
+
+# Example 2: Simpler version with fewer lines
+def multiply(number1, number2):
+    return number1 * number2
+
+result = multiply(4, 6)
+print(result)
+# Output:
+# 24
+```
+
+**Notes:**  
+- `return` allows you to **store or further process the function’s output**.  
+- Without `return`, the function outputs `None`.
+
+---
+
+### 2. Keyword Arguments
+
+Keyword arguments allow you to **pass arguments by explicitly naming parameters**, ignoring their order.
+
+```python
+def hello(first, middle, last):
+    print("Hello " + first + " " + middle + " " + last)
+
+hello(last="Bro", middle="the", first="Shariff")
+# Output:
+# Hello Shariff the Bro
+```
+
+**Notes:**  
+- Improves **readability** and avoids errors when calling functions with multiple parameters.  
+- Can be combined with **positional arguments**.
+
+---
+
+### 3. Nested Function Calls
+
+You can **call a function inside another function** or **nest multiple calls** for concise code.
+
+```python
+# Without nesting
+num = input("Enter a whole positive number: ")
+num = float(num)
+num = abs(num)
+num = round(num)
+print(num)
+# If input: -4.7
+# Output:
+# 5
+
+# Using nested function calls
+print(round(abs(float(input("Enter a whole positive number: ")))))
+# If input: -4.7
+# Output:
+# 5
+```
+
+**Explanation:**  
+- `float(input(...))` → converts input to float  
+- `abs()` → gets absolute value  
+- `round()` → rounds to nearest integer  
+- Nesting **reduces lines of code** but may reduce readability if overused.
+
+---
+
+### 4. Default Arguments
+
+Default arguments **provide a fallback value** if the caller does not supply one.
+
+```python
+# Example 1: Default argument
+def hello(name="Bro"):
+    print("Hello " + name)
+
+hello()          # Output: Hello Bro
+hello("Shariff") # Output: Hello Shariff
+
+# Example 2: Multiple parameters with defaults
+def greet(first="John", last="Doe"):
+    print(f"Hello {first} {last}")
+
+greet()               # Output: Hello John Doe
+greet(first="Shamsudin") # Output: Hello Shamsudin Doe
+greet(last="Ali")        # Output: Hello John Ali
+```
+
+**Notes:**  
+- Default arguments **must come after non-default parameters**.  
+- Combine default and keyword arguments for maximum flexibility.
+
+---
+
+### ✅ Key Points
+
+1. **Return statement**: sends a value back and exits the function.  
+2. **Keyword arguments**: allow arguments to be passed in any order by naming them.  
+3. **Nested function calls**: combine multiple operations in a single expression.  
+4. **Default arguments**: provide fallback values, reducing the need for multiple function overloads.  
+
+---
+
+### 5. Complex Function Example — Multi-Operation Calculator
+
+```python
+def calculator(a, b, operation="add"):
+    """
+    Performs basic arithmetic operations: add, subtract, multiply, divide.
+    Defaults to addition if no operation is provided.
+    """
+    if operation == "add":
+        return a + b
+    elif operation == "subtract":
+        return a - b
+    elif operation == "multiply":
+        return a * b
+    elif operation == "divide":
+        if b != 0:
+            return a / b
+        else:
+            return "Cannot divide by zero"
+    else:
+        return "Invalid operation"
+
+# Examples
+print(calculator(10, 5))              # Output: 15 (default add)
+print(calculator(10, 5, "subtract"))  # Output: 5
+print(calculator(10, 5, "multiply"))  # Output: 50
+print(calculator(10, 5, "divide"))    # Output: 2.0
+print(calculator(10, 0, "divide"))    # Output: Cannot divide by zero
+```
+
+**Explanation:**  
+- Demonstrates **default arguments, conditionals, and return values**.  
+- Can handle multiple operations in a **flexible, reusable way**.  
+- Shows real-world use of Python functions in a simple calculator.
+
