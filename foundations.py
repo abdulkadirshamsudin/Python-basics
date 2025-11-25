@@ -129,10 +129,18 @@
 #     total += i
 # print(total)
 
-import time
+# import time
 
-for seconds in range(10,0, -2):
-    print(seconds)
-    time.sleep(1)
-print("Happy New Year!")
+# for seconds in range(10,0, -2):
+#     print(seconds)
+#     time.sleep(1)
+# print("Happy New Year!")
+
+# functions - block of code which is executed when it is called
+def hello (name):
+    print("hello " + name)
+    print("How are you?")
+    
+
+hello("bro  ")
 

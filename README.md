@@ -433,3 +433,181 @@ for i in range(1, 4):  # Outer loop
 - **`while` loop** → best for repeating until a condition is met.  
 - Use **`break`** and **`continue`** to control loop execution.  
 - **Nested loops** allow multi-level iteration for more complex logic.
+
+
+
+
+
+## Python Functions
+
+Functions are **blocks of reusable code** that run when called.  
+They help organize your code, avoid repetition, and make programs easier to read and maintain.
+
+---
+
+### 1. Basic Function
+
+```python
+# Define a function
+def hello(name):
+    print("Hello " + name)
+    print("How are you?")
+
+# Call the function
+hello("Bro")
+# Output:
+# Hello Bro
+# How are you?
+```
+
+**Explanation:**  
+- `def hello(name):` → defines a function named `hello` with one parameter `name`.  
+- The function code executes **only when called**: `hello("Bro")`.  
+- Functions can take **parameters** (inputs) and optionally **return values**.
+
+---
+
+### 2. Function with Return Value
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)
+# Output:
+# 8
+```
+
+**Notes:**  
+- `return` sends a value back to the caller.  
+- Without `return`, the function returns `None` by default.
+
+---
+
+### 3. Function with Default Parameter
+
+```python
+def greet(name="Guest"):
+    print("Hello " + name)
+
+greet("Shamsudin")  # Output: Hello Shamsudin
+greet()              # Output: Hello Guest
+```
+
+**Explanation:**  
+- Parameters can have **default values**.  
+- If no argument is provided, the default is used.
+
+---
+
+### 4. Function with Multiple Parameters
+
+```python
+def introduce(name, age, country):
+    print(f"My name is {name}, I am {age} years old, and I live in {country}.")
+
+introduce("Shamsudin", 21, "Kenya")
+# Output:
+# My name is Shamsudin, I am 21 years old, and I live in Kenya.
+```
+
+**Notes:**  
+- Python supports **positional** and **keyword arguments**.  
+- Example of keyword arguments:
+```python
+introduce(age=21, country="Kenya", name="Shamsudin")
+```
+
+---
+
+### 5. Function with Multiple Return Values
+
+```python
+def arithmetic(a, b):
+    return a+b, a-b, a*b, a/b
+
+sum_, diff, prod, quot = arithmetic(10, 2)
+print(sum_, diff, prod, quot)
+# Output:
+# 12 8 20 5.0
+```
+
+**Explanation:**  
+- Functions can return **multiple values** as a tuple.  
+- You can unpack them into separate variables.
+
+---
+
+### 6. Functions with Conditional Logic
+
+```python
+def check_age(age):
+    if age >= 18:
+        return "Adult"
+    elif age < 0:
+        return "Invalid age"
+    else:
+        return "Minor"
+
+print(check_age(21))  # Output: Adult
+print(check_age(-5))  # Output: Invalid age
+```
+
+**Notes:**  
+- Functions can include **loops, conditionals, and other logic**.  
+- They are not limited to a single operation.
+
+---
+
+### 7. Complex Function Example — Countdown Timer with Optional Step
+
+```python
+import time
+
+def countdown(start, stop=0, step=-1, message="Time's up!"):
+    """
+    Countdown timer that prints numbers from start to stop using a custom step.
+    Pauses 1 second between numbers and prints a final message.
+    """
+    for seconds in range(start, stop, step):
+        print(seconds)
+        time.sleep(1)
+    print(message)
+
+# Example 1: default countdown
+countdown(10, 0, -2, "Happy New Year!")
+# Output:
+# 10
+# 8
+# 6
+# 4
+# 2
+# Happy New Year!
+
+# Example 2: custom step countdown
+countdown(5, -1, -1, "Blast off!")
+# Output:
+# 5
+# 4
+# 3
+# 2
+# 1
+# 0
+# Blast off!
+```
+
+**Explanation:**  
+- Uses **parameters with default values** (`stop=0`, `step=-1`, `message`).  
+- Demonstrates **loops inside functions**.  
+- Can be reused with **different start, stop, step, and messages**.  
+- Combines **logic, loops, and printing** in one function — a good example of real-world use.
+
+---
+
+✅ **Key Points About Functions:**
+- Always define before calling.  
+- Parameters make functions flexible.  
+- `return` lets functions output values.  
+- Functions can contain **loops, conditionals, and other functions**.  
+- Properly documented functions (with docstrings) are easier to read and maintain.  
