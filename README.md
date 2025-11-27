@@ -738,7 +738,7 @@ greet(last="Ali")        # Output: Hello John Ali
 
 ---
 
-### 5. Complex Function Example — Multi-Operation Calculator
+### 5. Multi-Operation Calculator (using funcitions)
 
 ```python
 def calculator(a, b, operation="add"):

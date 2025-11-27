@@ -178,44 +178,46 @@
 # # Blast off!
 
 
-# return statement - used to exit a function and return a value.
-# def multiply (number1, number2):
-#     result = number1 * number2
-#     return result
-#     # print(result)  # This line will not be executed
-# # print(multiply(3, 5)) # this will not print anything.
+# # return statement - used to exit a function and return a value.
+# # def multiply (number1, number2):
+# #     result = number1 * number2
+# #     return result
+# #     # print(result)  # This line will not be executed
  
-# x = multiply(3, 5)
-# print(x) # this will print 15
+# # x = multiply(3, 5)
+# # print(x) # this will print 15
 
-# # SIMPER WAY WITH LESS LINES OF CODE.
-# def multiply(number1, number2):
-#     return number1 * number2
-# result = multiply(4, 6)
-# print(result)  # This will print 24 
+# # # SIMPER WAY WITH LESS LINES OF CODE.
+# # def multiply(number1, number2):
+# #     return number1 * number2
+# # result = multiply(4, 6)
+# # print(result)  # This will print 24 
 
-# Keyword arguments - arguments that are passed to a function by explicitly naming each parameter and its corresponding value.
+# # Keyword arguments - arguments that are passed to a function by explicitly naming each parameter and its corresponding value.
 
 
-# def hello (first,middle,last):
-#     print("hello " + first + " " + middle + " " + last) 
+# # def hello (first,middle,last):
+# #     print("hello " + first + " " + middle + " " + last) 
 
-# hello(last="bro", middle="the", first="shariff") # this will print hello shariff the bro
+# # hello(last="bro", middle="the", first="shariff") # this will print hello shariff the bro
 
-# neste function calls - function calls made within other functions.
+# # neste function calls - function calls made within other functions.
 
-# num = input("Enter a whole positive number: ")
-# num = float(num)
-# num = abs(num)
-# num = round(num)
-# print(num)
-# # The above code can be simplified using nested function calls as follows:
+# # num = input("Enter a whole positive number: ")
+# # num = float(num)
+# # num = abs(num)
+# # num = round(num)
+# # print(num)
+# # # The above code can be simplified using nested function calls as follows:
 
-# print(round(abs(float(input ("Enter a whole positive number: ")))))
-# # This single line of code achieves the same result by nesting the function calls.
+# # print(round(abs(float(input ("Enter a whole positive number: ")))))
+# # # This single line of code achieves the same result by nesting the function calls.
 
-#Default arguments - arguments that take a default value if no value is provided in the function call.
-def hello (name = "bro"):
-    print("hello " + name)
-hello()
-hello("shariff")
+# #Default arguments - arguments that take a default value if no value is provided in the function call.
+# def hello (name = "bro"):
+#     print("hello " + name)
+# hello()
+# hello("shariff")
+
+
+
