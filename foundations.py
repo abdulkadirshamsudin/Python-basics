@@ -183,6 +183,7 @@
 # #     result = number1 * number2
 # #     return result
 # #     # print(result)  # This line will not be executed
+# # # print(multiply(3, 5)) # this will not print anything.
  
 # # x = multiply(3, 5)
 # # print(x) # this will print 15
